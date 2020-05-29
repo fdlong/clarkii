@@ -1,0 +1,24 @@
+@startuml
+
+Boundary Publisher
+control DNFTransformer
+control DocPublisher
+control IndexBuilder
+entity DocCao
+entity DocConjCao
+entity ConjAsgnCao
+entity ConjDocCao
+entity AsgnConjCao
+
+-> Publisher : publish(Content)
+Publisher -> DNFTransformer : transform(Condition)
+Publisher -> DocPublisher : publish(Doc, Conjunction[])
+DocPublisher -> IndexBuilder : build(String, Conjunction[])
+DocPublisher -> DocPublisher : publish(Pack)
+DocPublisher -> DocCao
+DocPublisher -> DocConjCao
+DocPublisher -> ConjAsgnCao
+DocPublisher -> ConjDocCao
+DocPublisher -> AsgnConjCao
+
+@enduml
