@@ -24,4 +24,16 @@ package org.clarkii.core;
  * @create: 2020/5/27 14:32
  */
 public class Engine {
+
+    public void execute() {
+
+    }
+
+    private void prepare() {
+
+    }
+
+    private void process() {
+
+    }
 }

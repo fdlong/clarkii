@@ -9,6 +9,7 @@ entity DocConjCao
 entity ConjAsgnCao
 entity ConjDocCao
 entity AsgnConjCao
+entity AsgnRangesCao
 
 -> Publisher : publish(Content)
 Publisher -> DNFTransformer : transform(Condition)
@@ -20,5 +21,6 @@ DocPublisher -> DocConjCao
 DocPublisher -> ConjAsgnCao
 DocPublisher -> ConjDocCao
 DocPublisher -> AsgnConjCao
+DocPublisher -> AsgnRangesCao
 
 @enduml

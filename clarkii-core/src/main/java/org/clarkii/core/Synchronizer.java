@@ -13,27 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.clarkii.core.algo;
-
-import org.clarkii.core.entity.Doc;
-import org.springframework.stereotype.Component;
+package org.clarkii.core;
 
 /**
- * Title: DocPublisher
+ * Title: Synchronizer
  * Description:
  *
  * @groups: Clarkii Study Group
  * @author: fangdelong
- * @create: 2020/5/27 14:32
+ * @create: 2020/6/5 14:19
  */
-public class DocPublisher {
-    /**
-     * @param doc
-     * @param conjunctions
-     * @return the number of affected docs
-     */
-    public int publish(Doc doc, Conjunction[] conjunctions) {
-        return 0;
-    }
+public class Synchronizer implements Runnable {
 
+    @Override
+    public void run() {
+
+    }
 }

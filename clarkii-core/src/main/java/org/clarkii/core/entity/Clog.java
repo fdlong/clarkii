@@ -13,27 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.clarkii.core.algo;
+package org.clarkii.core.entity;
 
-import org.clarkii.core.entity.Doc;
-import org.springframework.stereotype.Component;
+import lombok.Data;
+
+import java.sql.Timestamp;
 
 /**
- * Title: DocPublisher
+ * Title: Clog
  * Description:
  *
  * @groups: Clarkii Study Group
  * @author: fangdelong
- * @create: 2020/5/27 14:32
+ * @create: 2020/6/2 16:44
  */
-public class DocPublisher {
-    /**
-     * @param doc
-     * @param conjunctions
-     * @return the number of affected docs
-     */
-    public int publish(Doc doc, Conjunction[] conjunctions) {
-        return 0;
-    }
-
+@Data
+public class Clog {
+    private long id;
+    private Directive directive;
+    private String key;
+    private String field;
+    private String value;
+    private Timestamp nonce;
 }

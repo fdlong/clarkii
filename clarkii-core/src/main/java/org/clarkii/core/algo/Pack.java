@@ -16,7 +16,7 @@
 package org.clarkii.core.algo;
 
 import lombok.Data;
-import org.clarkii.core.entity.*;
+import org.clarkii.core.entity.Clog;
 
 import java.io.Serializable;
 
@@ -30,9 +30,7 @@ import java.io.Serializable;
  */
 @Data
 public class Pack implements Serializable {
-    private Doc[] docs;
-    private DocConj[] docConjs;
-    private ConjAsgn[] conjAsgns;
-    private ConjDoc[] conjDocs;
-    private AsgnConj asgnConj;
+    private long low;
+    private long high;
+    private Clog[] logs;
 }

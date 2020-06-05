@@ -13,27 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.clarkii.core.algo;
+package org.clarkii.core.util;
 
-import org.clarkii.core.entity.Doc;
-import org.springframework.stereotype.Component;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Title: DocPublisher
+ * Title: IDGenerator
  * Description:
  *
  * @groups: Clarkii Study Group
  * @author: fangdelong
- * @create: 2020/5/27 14:32
+ * @create: 2020/6/4 14:05
  */
-public class DocPublisher {
-    /**
-     * @param doc
-     * @param conjunctions
-     * @return the number of affected docs
-     */
-    public int publish(Doc doc, Conjunction[] conjunctions) {
-        return 0;
+public class IDGenerator {
+    private static Map<Class, AtomicLong> idMap = new HashMap();
+
+    public void syncId(Class clazz, Long cid) {
+        idMap.put(clazz, new AtomicLong(cid));
     }
 
+    public long next(Class clazz) {
+        return idMap.get(clazz).addAndGet(1);
+    }
 }

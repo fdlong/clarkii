@@ -13,27 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.clarkii.core.algo;
-
-import org.clarkii.core.entity.Doc;
-import org.springframework.stereotype.Component;
+package org.clarkii.core.process;
 
 /**
- * Title: DocPublisher
+ * Title: ServerUpProcessor
  * Description:
+ *
+ *  If run in cluster mode:
+ *    Do following asynchronously
+ *    1. Join the cluster
+ *    2. The Leader election
+ *    3. If run as follow, kickoff synchronizer
+ *    4. If run as leader, kickoff sweeper
+ *
+ *  If run in stand alone mode:
+ *    1. Kickoff sweeper
  *
  * @groups: Clarkii Study Group
  * @author: fangdelong
- * @create: 2020/5/27 14:32
+ * @create: 2020/6/5 15:15
  */
-public class DocPublisher {
-    /**
-     * @param doc
-     * @param conjunctions
-     * @return the number of affected docs
-     */
-    public int publish(Doc doc, Conjunction[] conjunctions) {
-        return 0;
-    }
+public class ServerUpProcessor implements Processor {
+    @Override
+    public void process() {
 
+    }
 }

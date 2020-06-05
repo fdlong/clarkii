@@ -1,0 +1,17 @@
+@startuml
+
+Boundary Matcher
+control DocMatcher
+entity AsgnRangesCao
+entity AsgnConjCao
+entity ConjDocCao
+entity DocCao
+
+-> Matcher : match(Attributes)
+Matcher -> DocMatcher : match(Attrs)
+DocMatcher -> AsgnRangesCao
+DocMatcher -> AsgnConjCao
+DocMatcher -> ConjDocCao
+DocMatcher -> DocCao
+
+@enduml

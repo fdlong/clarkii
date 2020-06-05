@@ -15,25 +15,28 @@
  */
 package org.clarkii.core.algo;
 
-import org.clarkii.core.entity.Doc;
-import org.springframework.stereotype.Component;
-
 /**
- * Title: DocPublisher
+ * Title: DirectExecutor
  * Description:
  *
  * @groups: Clarkii Study Group
  * @author: fangdelong
- * @create: 2020/5/27 14:32
+ * @create: 2020/6/4 10:55
  */
-public class DocPublisher {
+public class DirectExecutor {
     /**
-     * @param doc
-     * @param conjunctions
-     * @return the number of affected docs
+     * @param pack
+     * @return the number of executed directives
      */
-    public int publish(Doc doc, Conjunction[] conjunctions) {
+    public int execute(Pack pack) {
         return 0;
     }
 
+    /**
+     * @param last
+     * @return the directive pack since last update
+     */
+    public Pack query(long last) {
+        return null;
+    }
 }
